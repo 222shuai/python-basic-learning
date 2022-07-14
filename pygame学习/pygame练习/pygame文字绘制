@@ -1,0 +1,34 @@
+pygame.freetype:向屏幕上绘制特定字体的文字
+#因为文字不能直接使用print(),而是通过像素根据字体点阵图绘制的
+#调用方法:
+import pygame.sys
+import pygame.freetype
+
+windows系统中字体文件存储目录为：C:\Windows\Fonts    字体文件扩展名为*.ttf或*.ttc
+
+#使用：
+pygame.freetype
+pygame.freetype.Font #根据字体和字号生成一个Font对象
+Font.render_to()
+Font.render() #用Font对象的render*方法绘制具体文字
+
+Font类：
+pygame.freetype.Font(file, size=0)
+#file:字体类型名称或路径(建议绝对路径); size:字体大小
+
+Font类的绘制方法(1)
+Font.render_to(surf, dest, text, fgcolor=None,
+                bgcolor=None, rotation=0, size=0）→Rect
+#返回一个Rect类型(即矩形对象)
+#surf:绘制字体的平面,Surface对象; dest:在平面中的具体位置(x, y)
+#text:绘制的文字内容; fgcolor:文字颜色; bgcolor:背景颜色
+#rotation:文字逆时针的旋转角度(0~359),仅部分字体可旋转
+#size:文字大小，赋值该参数将覆盖Font中的设定值
+
+Font类的绘制方法(2)
+Font.render(text, fgcolor=None, bgcolor=None,
+            rotation=0, size=0)→(Surface, Rect)
+#返回一个(Surface, Rect)元组类型:将字体绘制到了新屏幕Surface的矩形区域Rect内
+#text:绘制的文字内容; fgcolor:文字颜色; bgcolor:背景颜色
+#rotation:文字逆时针的旋转角度(0~359),仅部分字体可旋转
+#size:文字大小，赋值该参数将覆盖Font中的设定值

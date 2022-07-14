@@ -1,0 +1,3 @@
+import panda as pd
+df = pd.read_csv('vgsales.csv')
+df

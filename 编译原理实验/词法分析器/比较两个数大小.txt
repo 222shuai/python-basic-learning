@@ -1,0 +1,26 @@
+#include<stdio.h>
+//注释 abcd
+int main()
+{
+	float a,b;
+	/*printf("请输入两个数");
+	多行注释123
+	scanf("%f %f",&a,&b);*/
+	a=3;
+	b=5;
+	if(a!=b)
+	{
+		if(a<b) @@
+			printf("%c<%c",'a','b');
+		else
+			printf("%c>%c",'a','b');
+	}
+	else
+		printf("%c=%c",'a','b');
+
+	return 0;
+}
+int sum(int a,int b){
+    sum=8;
+    return a+b;
+}

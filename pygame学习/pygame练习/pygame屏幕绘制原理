@@ -1,0 +1,17 @@
+1.pygame.Surface:绘图层，或绘图平面，或图层
+#用于表示图形、文字或图像的绘制效果与当前屏幕主图层可以并列存在
+#如果不绘制在主图层上，则不会被显示,每个游戏只有一个主图层
+
+2.pygame.Rect:矩形区域
+#对应于当前主图层的某个具体区域
+#相当于某个矩形区域的指针或标识信息
+#可以指定图层绘制在某个矩形区域中
+
+3.主图层:由pygame.display.set_mode()生成的Surface对象(即screen)
+size = width, height = 600, 400
+screen = pygame.display.set_mode(size)
+#在主图层上绘制其他图层使用.blit()方法
+screen.bilt(ball, ballrect) #ball:pygame.Surface; ballrect:pygame.Rect
+
+4.理解绘制过程：
+包含某个图形的主图层:pygame.Surface → 定位某个区域:pygame.Rect → 将新图层绘制在区域内
